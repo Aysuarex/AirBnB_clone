@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Defines the BaseModel"""
 import models
+from uuid import uuid4
+from datetime import datetime
 
 
 class BaseModel:
@@ -22,3 +24,16 @@ class BaseModel:
             assign with the current datetime when an instance is created
             and it will be updated every time you change your object
         """
+        if len(kwargs) == 0:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
+            models.storage.new(self)
+            models.storage(save)
+        else:
+            fto = "%Y-%m-%dT%H:%M:%S.%f"
+            kwargs["created_at"] = datetime.strptime(kwargs["created_at"], fto)
+            kwargs["updated_at"] = datetime.strptime(kwargs["updated_at"], fto)
+            for key, val in kwargs.items():
+                if "__class__" not in key:
+                    setattr(self, key, val)
