@@ -13,7 +13,7 @@ class BaseModel:
         Basemodel Constructor
 
         Public Instance attributes:
-          -----------
+         |--------------------------|
           id: string
             assign with an uuid when an instance is created
           created_at: datetime
