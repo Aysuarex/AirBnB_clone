@@ -12,9 +12,14 @@ from models.place import Place
 from models.review import Review
 import json
 
-attri = {"BaseModel": BaseModel, "City": City, "State": State,
-        "Amenity": Amenity, "User": User, "Place": Place, "Review": Review}
-
+class_list = {"BaseModel": BaseModel, 
+              "City": City, 
+              "State": State,
+              "Amenity": Amenity,
+              "User": User,
+              "Place": Place,
+              "Review": Review
+              }
 
 class FileStorage():
     """that serializes instances to a JSON"""
@@ -36,19 +41,18 @@ class FileStorage():
 
     def save(self):
         """serializes __objects to the JSON file (path: __file_path)"""
-        json_ob = {}
+        new_dict = {}
         for key in self.__objects:
-            json_ob[key] = self.__objects[key].to_dict()
+            new_dict[key] = self.__objects[key].to_dict()
         with open(self.__file_path, 'w') as f:
-            json.dump(json_ob, f)
+            json.dump(new_dict, f)
 
     def reload(self):
         """deserializes the JSON file to __objects"""
         try:
-            with open(self.__file_path, 'r') as first:
-                beer = json.load(burger)
-            for malta in beer:
-                self.__objects[malta] = attri[beer[malta]["__class__"]](
-                    **beer[malta])
+            with open(self.__file_path, 'r') as f:
+                a_dict = json.load(f)
+            for key in a_dict:
+                self.__objects[key] = class_list[a_dict[key]["__class__"]](**a_dict[key)
         except:
             pass
