@@ -22,8 +22,8 @@ class BaseModel:
             models.storage(save)
         else:
             format = "%Y-%m-%dT%H:%M:%S.%f"
-            kwargs["created_at"] = datetime.strptime(kwargs["created_at"], format)
-            kwargs["updated_at"] = datetime.strptime(kwargs["updated_at"], format)
+            kwargs["created_at"] = datetime.strftime(kwargs["created_at"], format)
+            kwargs["updated_at"] = datetime.strftime(kwargs["updated_at"], format)
             for key, val in kwargs.items():
                 if "__class__" not in key:
                     setattr(self, key, val)
@@ -46,8 +46,8 @@ class BaseModel:
         """ Returns a dictionary containing all keys/values of __dict__
         of the instance
         """
-        new_dict = dict(self.__dict__)
-        new_dict["created_at"] = self.created_at.isoformat(sep='T')
-        new_dict["updated_at"] = self.updated_at.isoformat(sep='T')
+        new_dict = self.__dict__.copy()
+        new_dict["created_at"] = self.created_at.isoformat()
+        new_dict["updated_at"] = self.updated_at.isoformat()
         new_dict["__class__"] = self.__class__.__name__
         return new_dict
