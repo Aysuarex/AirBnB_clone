@@ -21,9 +21,9 @@ class BaseModel:
             models.storage.new(self)
             models.storage(save)
         else:
-            fto = "%Y-%m-%dT%H:%M:%S.%f"
-            kwargs["created_at"] = datetime.strptime(kwargs["created_at"], fto)
-            kwargs["updated_at"] = datetime.strptime(kwargs["updated_at"], fto)
+            format = "%Y-%m-%dT%H:%M:%S.%f"
+            kwargs["created_at"] = datetime.strptime(kwargs["created_at"], format)
+            kwargs["updated_at"] = datetime.strptime(kwargs["updated_at"], format)
             for key, val in kwargs.items():
                 if "__class__" not in key:
                     setattr(self, key, val)
