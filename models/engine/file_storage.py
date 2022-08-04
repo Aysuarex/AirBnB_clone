@@ -22,7 +22,7 @@ class_list = {"BaseModel": BaseModel,
               }
 
 class FileStorage():
-    """that serializes instances to a JSON"""
+    """Serializes instances to a JSON"""
 
     # string - path to the JSON file
     __file_path = "file.json"
