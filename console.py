@@ -61,9 +61,9 @@ class HBNBCommand(cmd.Cmd):
             return False
         if args[0] in class_list:
             if len(args) > 1:
-                instance = args[0] + "." + args[1]
-                if anstance in models.storage.all():
-                    print(models.storage.all()[instance])
+                key = args[0] + "." + args[1]
+                if key in models.storage.all():
+                    print(models.storage.all()[key])
                 else:
                     print("** no instance found **")
                     return False
@@ -73,24 +73,27 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
             return False
-            
+
     def do_destroy(self, arg):
-            """Deletes an instance based on the class and id"""
-            args = shlex.split(arg)
-            if len(args) == 0:
-                print("** class name missing **")
-            elif args[0] in tom:
-                if len(args) > 1:
-                    key = args[0] + "." + args[1]
-                    if key in models.storage.all():
-                        models.storage.all().pop(key)
-                        models.storage.save()
-                    else:
-                        print("** no instance found **")
+        """Deletes an instance based on the class and id"""
+        args = shlex.split(arg)
+        if len(args) == 0:
+            print("** class name missing **")
+            return False
+        if args[0] in class_list:
+            if len(args) > 1:
+                key = args[0] + "." + args[1]
+                if key in models.storage.all():
+                    print(models.storage.all()[key])
                 else:
-                    print("** instance id missing **")
+                    print("** no instance found **")
+                    return False
             else:
-                print("** class doesn't exist **")
+                print("** instance id missing **")
+                return False
+        else:
+            print("** class doesn't exist **")
+            return False
 
 
 
