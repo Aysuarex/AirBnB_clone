@@ -53,6 +53,6 @@ class FileStorage():
             with open(self.__file_path, 'r') as f:
                 a_dict = json.load(f)
             for key in a_dict:
-                self.__objects[key] = class_list[a_dict[key]["__class__"]](**a_dict[key)
+                self.__objects[key] = class_list[a_dict[key]["__class__"]](**a_dict[key])
         except:
             pass
