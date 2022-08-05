@@ -14,7 +14,7 @@ class BaseModel:
         """
         Basemodel Constructor
         """
-        format = "%Y-%m-%dT%H:%M:%S.%f"
+        frmt = "%Y-%m-%dT%H:%M:%S.%f"
         if len(kwargs) == 0:
             self.id = str(uuid4())
             self.created_at = datetime.now()
@@ -22,11 +22,11 @@ class BaseModel:
             models.storage.new(self)
             models.storage(save)
         else:
-            #Convert keys to datetime objects using strptime()
+            # Convert keys to datetime objects using strptime()
             if hasattr(self, "created_at") and type(self.created_at) is str:
-                self.created_at = datetime.strptime(kwargs["created_at"], format)
+                self.created_at = datetime.strptime(kwargs["created_at"], frmt)
             if hasattr(self, "updated_at") and type(self.updated_at) is str:
-                self.updated_at = datetime.strptime(kwargs["updated_at"], format)
+                self.updated_at = datetime.strptime(kwargs["updated_at"], frmt)
             for key, val in kwargs.items():
                 if "__class__" not in key:
                     setattr(self, key, val)
