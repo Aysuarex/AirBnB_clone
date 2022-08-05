@@ -12,14 +12,15 @@ from models.place import Place
 from models.review import Review
 import json
 
-class_list = {"BaseModel": BaseModel, 
-              "City": City, 
+class_list = {"BaseModel": BaseModel,
+              "City": City,
               "State": State,
               "Amenity": Amenity,
               "User": User,
               "Place": Place,
               "Review": Review
               }
+
 
 class FileStorage():
     """Serializes instances to a JSON"""
@@ -53,6 +54,5 @@ class FileStorage():
             with open(self.__file_path, 'r') as f:
                 a_dict = json.load(f)
             for key in a_dict:
-                self.__objects[key] = class_list[a_dict[key]["__class__"]](**a_dict[key])
-        except:
-            pass
+                self.__objects[key] = class_list[a_dict[key]["__class__"]](
+                        **a_dict[key])
