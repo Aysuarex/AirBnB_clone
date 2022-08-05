@@ -56,3 +56,5 @@ class FileStorage():
             for key in a_dict:
                 self.__objects[key] = class_list[a_dict[key]["__class__"]](
                         **a_dict[key])
+        except:
+            pass
