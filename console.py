@@ -124,10 +124,10 @@ class HBNBCommand(cmd.Cmd):
         floats = ["latitude", "longitude"]
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] in tom:
+        elif args[0] in class_list:
             if len(args) > 1:
-                k = args[0] + "." + args[1]
-                if k in models.storage.all():
+                instance = args[0] + "." + args[1]
+                if instance in models.storage.all():
                     if len(args) > 2:
                         if len(args) > 3:
                             if args[0] == "Place":
@@ -141,8 +141,8 @@ class HBNBCommand(cmd.Cmd):
                                         args[3] = float(args[3])
                                     except:
                                         args[3] = 0.0
-                            setattr(models.storage.all()[k], args[2], args[3])
-                            models.storage.all()[k].save()
+                            setattr(models.storage.all()[instance], args[2], args[3])
+                            models.storage.all()[instance].save()
                         else:
                             print("** value missing **")
                     else:
