@@ -1,4 +1,4 @@
-#!/bin/bash/python3
+#!/usr/bin/python3
 """Entry point of the command interpreter"""
 
 import cmd
@@ -25,7 +25,7 @@ class_list = {"BaseModel": BaseModel,
 
 class HBNBCommand(cmd.Cmd):
     """Class definition"""
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -155,7 +155,5 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
 
-
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
-
