@@ -1,46 +1,31 @@
-#!/usr/bin/env python3
-"""
-Unitest for models/state.py
+#!/usr/bin/python3
+"""test module for class State"""
 
-Unittest classes:
-    test_state_instantiates
-    test_state_save
-    test_state_dict
-    """
-
-import unittest
 import models
-from models.state import State
+import datetime
+import unittest
 
 
-class test_state_instantiates(unittest.TestCase):
-    """ Unittest for testing instantiation"""
+class StateTest(unittest.TestCase):
+    """tests the class State"""
 
-    def test_instantiation(self):
-        self.assertIs(State, type(State()))
+    def test_documentation(self):
+        """tests module and class docstring"""
+        self.assertIsNotNone(models.state.__doc__)
+        self.assertIsNotNone(models.state.State.__doc__)
 
-    def test_instantiation_with_kwargs(self):
-        self.assertIs(State, type(State(name="California")))
+    def test_class(self):
+        """test instance class"""
+        instance = models.state.State()
+        self.assertIsInstance(instance, models.state.State)
 
-
-class test_state_save(unittest.TestCase):
-    """ Unittest for testing save"""
-
-    def test_save(self):
-        state = State()
-        state.save()
-        self.assertNotEqual(state.created_at, state.updated_at)
-
-    def test_save_updated(self):
-        state = State()
-        state.save()
-        state.save()
-        self.assertNotEqual(state.created_at, state.updated_at)
-
-    def test_save_to_json(self):
-        state = State()
-        state.save()
-        self.assertIs(type(state.to_dict()), dict)
+    def test_type(self):
+        """test type of instance atributes"""
+        instance = models.state.State()
+        self.assertIsInstance(instance.id, str)
+        self.assertIsInstance(instance.created_at, datetime.datetime)
+        self.assertIsInstance(instance.updated_at, datetime.datetime)
+        self.assertIsInstance(instance.name, str)
 
 
 if __name__ == "__main__":

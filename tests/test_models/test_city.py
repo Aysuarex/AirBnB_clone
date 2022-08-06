@@ -1,45 +1,32 @@
-#!/usr/bin/env python3
-"""
-unittests for the City class
-"""
+#!/usr/bin/python3
+"""test module for class City"""
+
+import models
+import datetime
 import unittest
-from models.city import City
-from models.base_model import BaseModel
 
 
-class testfile(unittest.TestCase):
-    """ unittests for City class """
-    def test_inheritance(self):
-        """ checks if it inherits from BaseModel """
-        self.assertTrue(issubclass(City, BaseModel))
+class CityTest(unittest.TestCase):
+    """tests the class City"""
 
-    def test_attributes(self):
-        """ checks if it has the correct attributes """
-        self.assertTrue('state_id' in City.__dict__)
-        self.assertTrue('name' in City.__dict__)
+    def test_documentation(self):
+        """tests module and class docstring"""
+        self.assertIsNotNone(models.city.__doc__)
+        self.assertIsNotNone(models.city.City.__doc__)
 
-    def test_str(self):
-        """ checks if the str method works """
-        my_city = City()
-        string = "[City] ({}) {}".format(my_city.id, my_city.__dict__)
-        self.assertEqual(string, str(my_city))
+    def test_class(self):
+        """test instance class"""
+        instance = models.city.City()
+        self.assertIsInstance(instance, models.city.City)
 
-    def test_save(self):
-        """ checks if the save method works """
-        my_city = City()
-        my_city.save()
-        self.assertNotEqual(my_city.created_at, my_city.updated_at)
-
-    def test_to_dict(self):
-        """ checks if the to_dict method works """
-        my_city = City()
-        new_dict = my_city.to_dict()
-        self.assertEqual(type(new_dict), dict)
-        self.assertTrue('to_dict' in dir(my_city))
-
-    def test_docstring(self):
-        """ checks if the docstring is correct """
-        self.assertIsNotNone(City.__doc__)
+    def test_type(self):
+        """test type of instance atributes"""
+        instance = models.city.City()
+        self.assertIsInstance(instance.id, str)
+        self.assertIsInstance(instance.created_at, datetime.datetime)
+        self.assertIsInstance(instance.updated_at, datetime.datetime)
+        self.assertIsInstance(instance.state_id, str)
+        self.assertIsInstance(instance.name, str)
 
 
 if __name__ == "__main__":
