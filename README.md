@@ -1,11 +1,5 @@
 # 0x00. AirBnB clone - The console
 
-`Release date: Nov-15-2021`
-<!-- share on twitter -->
-[![Twitter](https://img.shields.io/twitter/url?labe=share&style=social&url=https%3A%2F%2Fgithub.com%2Fralexrivero%2FAirBnB_clone)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fralexrivero%2FAirBnB_clone)
-
-<img src="img/home_screen_custom.png" alt="AirBnB Custom banner">
-
 ## 0x00.Table of contents
 
 * [0x01 Introduction](#0x01-Introduction)
@@ -314,26 +308,3 @@ https://docs.python.org/3/library/unittest.html
 
 https://developers.google.com/edu/python
 
-## 0x0B Credits
-
-> *Console team: Rodrigo & Ronald*
-> *Web Static: Ronald*
-
-Rodrigo
-
-<a href="https://www.linkedin.com/in/rodrigo-mato-pla/" target="_blank">  <img align="left" alt="Rodrigo Mato | LinkedIn" src="https://img.shields.io/badge/LinkedIn-blue?style=social&logo=linkedin" /> </a>
-
-<a href="https://github.com/RodrigoMato00/" target="_blank">  <img align="left" src="https://img.shields.io/github/followers/RodrigoMato00?style=social" alt="RodrigoMato00 | Github"> </a>
-
-<br/>
-<br/>
-
-Ronald
-
-<a href="https://twitter.com/ralex_uy" target="_blank">  <img align="left" alt="Ronald Rivero | Twitter" src="https://img.shields.io/twitter/follow/ralex_uy?style=social" /> </a>
-
-<a href="https://www.linkedin.com/in/ronald-rivero/" target="_blank">  <img align="left" alt="Ronald Rivero | LinkedIn" src="https://img.shields.io/badge/LinkedIn-blue?style=social&logo=linkedin" /> </a>
-
-<a href="https://github.com/ralexrivero/" target="_blank">  <img align="left" src="https://img.shields.io/github/followers/ralexrivero?style=social" alt="Ralex | Github"> </a>
-
-<br/>
