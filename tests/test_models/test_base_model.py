@@ -56,7 +56,7 @@ class BaseModelTest(unittest.TestCase):
     def test_to_dict(self):
         """test to_dict method"""
         instance = models.base_model.BaseModel()
-        dictionary  = instance.to_dict()
+        dictionary = instance.to_dict()
         self.assertIsInstance(dictionary, dict)
         self.assertEqual(instance.__class__.__name__, dictionary["__class__"])
         self.assertEqual(instance.id, dictionary["id"])
