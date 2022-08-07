@@ -7,12 +7,12 @@
 * [0x03 Installation](#0x03-Installation)
 * [0x04 Testing](#0x04-Testing)
 * [0x05 Usage](#0x05-Usage)
-* [0x06 WebStatic](#0x06-Web-Static)
-* [0x07 License](#0x07-License)
-* [0x08 Contributing](#0x08-Contributing)
-* [0x09 Todo](#0x09-Todo)
-* [0x0A References](#0x0A-References)
-* [0x0B Credits](#0x0B-Credits)
+* [0x06 Authors](#0x06-Authors)
+
+
+
+
+
 
 ## 0x01 Introduction
 
@@ -260,51 +260,51 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
 ```bash
 (hbnb) create User
 1afa163d-486e-467a-8d38-3040afeaa1a1
-(hbnb) update User 1afa163d-486e-467a-8d38-3040afeaa1a1 email "ralexrivero@gmail.com"
+(hbnb) update User 1afa163d-486e-467a-8d38-3040afeaa1a1 email "aysuarex@gmail.com"
 (hbnb) show User 1afa163d-486e-467a-8d38-3040afeaa1a1
-[User] (s) [User] (1afa163d-486e-467a-8d38-3040afeaa1a1) {'id': '1afa163d-486e-467a-8d38-3040afeaa1a1', 'created_at': datetime.datetime(2021, 11, 14, 23, 42, 10, 502157), 'updated_at': datetime.datetime(2021, 11, 14, 23, 42, 10, 502186), 'email': 'ralexrivero@gmail.com'}
+[User] (s) [User] (1afa163d-486e-467a-8d38-3040afeaa1a1) {'id': '1afa163d-486e-467a-8d38-3040afeaa1a1', 'created_at': datetime.datetime(2021, 11, 14, 23, 42, 10, 502157), 'updated_at': datetime.datetime(2021, 11, 14, 23, 42, 10, 502186), 'email': 'aysuarex@gmail.com'}
 (hbnb)
 
 ```
 
-## 0x06 Web Static
+## 0x06 Authors
 
-* [0-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/0-index.html)
-* [1-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/1-index.html)
-* [2-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/2-index.html)
-* [3-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/3-index.html)
-* [4-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/4-index.html)
-* [5-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/5-index.html)
-* [6-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/6-index.html)
-* [7-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/7-index.html)
-* [8-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/8-index.html)
-* [100-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/100-index.html)
-* [101-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/101-index.html)
-* [102-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/102-index.html)
-* [103-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/103-index.html)
 
-## 0x07 License
 
-This project is under the Apache 2.0 license.
 
-## 0x08 Contributing
 
-This is a team project for practice and learning purposes. Contribution is welcome and encouraged.
 
-## 0x09 Todo
 
-* Fix the bug in the `count` command
-* Add usage to command help
-* improve the wikipages
-* Complete the tests for console.py
 
-## 0x0A References
 
-https://www.w3schools.com/python/python_modules.asp
 
-https://docs.python.org/3.4/tutorial/modules.html#packages
 
-https://docs.python.org/3/library/unittest.html
 
-https://developers.google.com/edu/python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
