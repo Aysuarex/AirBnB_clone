@@ -156,8 +156,6 @@ class HBNBCommand(cmd.Cmd):
                 pichu += 1
         print(pichu)
 
-<<<<<<< HEAD
-=======
     def default(self, line):
         """default method to use with command()"""
         line = line.replace('(', ' ').replace(')', ' ').replace('.', ' ')
@@ -189,6 +187,5 @@ class HBNBCommand(cmd.Cmd):
             print("** invalid command **")
 
 
->>>>>>> e4782b3016ccba4157373483bd0ede747efd9389
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
