@@ -17,7 +17,7 @@ The console is a command interpreter to manage objects abstraction between objec
 
 To see the fundamental background of the project visit the [Wiki](https://github.com/ralexrivero/AirBnB_clone/wiki).
 
-The console willl perform the following tasks:
+The console will perform the following tasks:
 
 * create a new object
 * retrive an object from a file
@@ -278,40 +278,4 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
     <li><a href="mailto:bamideleadefolaju@gmail.com">e-mail</a></li>
     </ul>
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
