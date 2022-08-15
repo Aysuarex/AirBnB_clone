@@ -1,14 +1,11 @@
-footer 
-{
-    background-color: white;
+footer {
+	background-color: white;
     height: 60px;
     width: 100%;
     border-top: 1px solid #CCCCCC;
-    bottom: 0;
     position: fixed;
-}
-footer p
-{
-    text-align: center;
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	bottom: 0;
 }
